@@ -11,17 +11,17 @@
   In the example below, we are accessing the property values. Uncomment the code below, run it and look at what prints in the console.
 */
 
-// var values = {
-//   one: 'These',
-//   two: ' are',
-//   three: ' the',
-//   four: ' property',
-//   five: ' values.'
-// } 
+var values = {
+  one: 'These',
+  two: ' are',
+  three: ' the',
+  four: ' property',
+  five: ' values.'
+} 
 
-// for(var key in values) {
-//   console.log(values[key])
-// }
+for(var key in values) {
+  console.log(values[key])
+}
 
 /*
   In this next example, we are accessing the property names themselves. Uncomment the code below, run it and look at what prints in the console.
@@ -40,7 +40,11 @@
 */
 
 function showValues( obj ) {
-  //Code Here
+var concat = ''
+for(let stupidFatHobbit in obj){
+  concat += obj[stupidFatHobbit]
+}
+return concat
 }
 
 
@@ -53,7 +57,13 @@ function showValues( obj ) {
   Return the updated object.
 */
 
-//Code Here
+function greaterThan10( obj ){
+  for( let val in obj){
+    if(obj[val] > 10){
+      obj[val] = 0
+    }
+  } return obj
+}
 
 
 
